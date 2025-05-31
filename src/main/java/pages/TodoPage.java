@@ -22,7 +22,7 @@ public class TodoPage {
         driver.get("https://todomvc.com/examples/react/dist/");
     }
 
-    public void addTodo(String text) {
+    public void addTodoItems(String text) {
         driver.findElement(todoInput).sendKeys(text + Keys.ENTER);
     }
 

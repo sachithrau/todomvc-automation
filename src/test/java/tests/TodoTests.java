@@ -20,13 +20,13 @@ public class TodoTests {
     @Test(priority = 1)
     public void testAddTodo() {
         todoPage.openApp();
-        todoPage.addTodo("Buy groceries");
+        todoPage.addTodoItems("Buy Groceries");
         Assert.assertEquals(todoPage.getTodoCount(), 1);
-        Assert.assertEquals(todoPage.getTodoText(0), "Buy groceries");
+        Assert.assertEquals(todoPage.getTodoText(0), "Buy Groceries");
     }
 
     @Test(priority = 2)
-    public void testToggleTodo() {
+    public void selectTodoItems() {
         todoPage.toggleTodo(0);
         // Additional asserts can be added for completed class
     }
