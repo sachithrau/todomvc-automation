@@ -7,24 +7,10 @@
 - Maven
 
 ## How to Run
+-Run the Test using Run button 
 
 ### Prerequisites
-- JDK 11+ installed
+- JDK installed
 - Maven installed
 - ChromeDriver in your PATH
 
-### Steps
-```bash
-git clone https://github.com/yourusername/todomvc-automation.git
-cd todomvc-automation
-mvn clean test
-```
-
-## Structure
-- `pages/` contains Page Object Model for TodoMVC.
-- `tests/` contains TestNG test classes.
-
-## Scenarios Covered
-- Add Todo
-- Toggle Complete
-- Delete Todo
