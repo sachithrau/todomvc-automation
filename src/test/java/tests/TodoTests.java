@@ -12,6 +12,7 @@ public class TodoTests {
 
     @BeforeClass
     public void setup() {
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         todoPage = new TodoPage(driver);
@@ -20,15 +21,14 @@ public class TodoTests {
     @Test(priority = 1)
     public void testAddTodo() {
         todoPage.openApp();
-        todoPage.addTodoItems("Buy Groceries");
+        todoPage.addTodoItems("Buy Foods");
         Assert.assertEquals(todoPage.getTodoCount(), 1);
-        Assert.assertEquals(todoPage.getTodoText(0), "Buy Groceries");
+        Assert.assertEquals(todoPage.getTodoText(0), "Buy Foods");
     }
 
     @Test(priority = 2)
     public void selectTodoItems() {
         todoPage.toggleTodo(0);
-        // Additional asserts can be added for completed class
     }
 
     @Test(priority = 3)
